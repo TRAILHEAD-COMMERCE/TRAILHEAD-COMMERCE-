@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trailhead Commerce — How It Works</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #f2e8d5;
+  min-height: 100vh;
+  background: #0b1e1b;
+}
+.page-wrap {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: url("bg.jpg") center/cover no-repeat;
+}
+.bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 22, 19, 0.55);
+}
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+  margin-bottom: 28px;
+}
+.mission {
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #f2e8d5;
+  max-width: 560px;
+  margin-bottom: 36px;
+  padding: 18px 22px;
+  background: rgba(6,17,15,0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(212,175,55,0.22);
+  backdrop-filter: blur(4px);
+}
+.section-title {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(212,175,55,0.85);
+  margin-bottom: 14px;
+  width: 100%;
+  text-align: center;
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.btn {
+  display: block;
+  width: 100%;
+  padding: 18px 22px;
+  border-radius: 12px;
+  background: rgba(9,26,23,0.62);
+  border: 1px solid rgba(212,175,55,0.35);
+  color: #f2e8d5;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.btn:hover {
+  background: rgba(19,46,41,0.78);
+  border-color: rgba(212,175,55,0.6);
+  transform: translateY(-1px);
+}
+.btn:active {
+  transform: translateY(0);
+}
+.btn .label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.btn .sub {
+  display: block;
+  font-size: 13px;
+  color: rgba(242,232,213,0.6);
+  font-weight: 400;
+}
+.btn.primary {
+  background: rgba(212,175,55,0.18);
+  border-color: rgba(212,175,55,0.45);
+}
+.btn.primary:hover {
+  background: rgba(212,175,55,0.3);
+  border-color: rgba(212,175,55,0.65);
+}
+.legal {
+  width: 100%;
+  max-width: 640px;
+  margin-top: auto;
+  padding-top: 32px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(242,232,213,0.45);
+  text-align: center;
+}
+.legal a {
+  color: rgba(242,232,213,0.6);
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  .page-wrap { padding: 28px 16px; }
+  .logo { max-width: 180px; }
+  .mission { font-size: 14px; padding: 14px 16px; }
+  .btn { padding: 16px 18px; }
+}
+
+
+
+
+
+
+.bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 22, 19, 0.55);
+}
+.content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+  margin-bottom: 28px;
+}
+.mission {
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #f2e8d5;
+  max-width: 560px;
+  margin-bottom: 36px;
+  padding: 18px 22px;
+  background: rgba(6,17,15,0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(212,175,55,0.22);
+  backdrop-filter: blur(4px);
+}
+.section-title {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(212,175,55,0.85);
+  margin-bottom: 14px;
+  width: 100%;
+  text-align: center;
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.btn {
+  display: block;
+  width: 100%;
+  padding: 18px 22px;
+  border-radius: 12px;
+  background: rgba(9,26,23,0.62);
+  border: 1px solid rgba(212,175,55,0.35);
+  color: #f2e8d5;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.btn:hover {
+  background: rgba(19,46,41,0.78);
+  border-color: rgba(212,175,55,0.6);
+  transform: translateY(-1px);
+}
+.btn:active {
+  transform: translateY(0);
+}
+.btn .label {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.btn .sub {
+  display: block;
+  font-size: 13px;
+  color: rgba(242,232,213,0.6);
+  font-weight: 400;
+}
+.btn.primary {
+  background: rgba(212,175,55,0.18);
+  border-color: rgba(212,175,55,0.45);
+}
+.btn.primary:hover {
+  background: rgba(212,175,55,0.3);
+  border-color: rgba(212,175,55,0.65);
+}
+.legal {
+  width: 100%;
+  max-width: 640px;
+  margin-top: auto;
+  padding-top: 32px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: rgba(242,232,213,0.45);
+  text-align: center;
+}
+.legal a {
+  color: rgba(242,232,213,0.6);
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  
+  .logo { max-width: 180px; }
+  .mission { font-size: 14px; padding: 14px 16px; }
+  .btn { padding: 16px 18px; }
+}
+</style>
+</head>
+<body><div class="bg"></div><div class="page-wrap"><div class="content"><a href="index.html"><img src="logo.jpg" alt="TRAILHEAD COMMERCE" class="logo"></a><h1>How It Works</h1><div class="mission">You do not have to figure out every tool, page, account, link, form, and workflow by yourself. Trailhead Commerce helps independent creators, brands, channels, reviewers, and online projects organize the business side of their work. You stay in control of your identity, content, and direction.<br><br><em>&ldquo;Bring the idea. We help build the path.&rdquo;</em></div><div class="section-title">Step 1 — Tell Us What You Are Building</div><p style="max-width:640px;margin:0 auto 14px;font-size:1.05rem;line-height:1.6;color:#5d452a;">You may have a channel, a website, a product idea, a review project, or content that needs a better home. Start by telling us what you have, what you want to build, and where you feel stuck.</p><div class="section-title">Step 2 — Choose the Help You Need</div><p style="max-width:640px;margin:0 auto 14px;font-size:1.05rem;line-height:1.6;color:#5d452a;">Some projects only need a simple website plan. Others need content organization, link hubs, outreach, or a bigger project system. You choose the support you want — Trailhead never takes over automatically.</p><div class="section-title">Step 3 — Keep Your Ownership</div><p style="max-width:640px;margin:0 auto 14px;font-size:1.05rem;line-height:1.6;color:#5d452a;">Your name, content, website, accounts, audience, and original work stay yours unless a separate written agreement says otherwise. We help coordinate the work — we do not automatically own your project.</p><div class="section-title">Step 4 — We Help Coordinate the System</div><p style="max-width:640px;margin:0 auto 14px;font-size:1.05rem;line-height:1.6;color:#5d452a;">With your permission, we help organize content, build page plans, coordinate links, and manage project details. For website embedding and technical support, Trailhead may coordinate with A1 Embed as an independent provider — a go-between that keeps communication, updates, and requests organized.</p><div class="section-title">Step 5 — Your Content Becomes Part of the Project</div><p style="max-width:640px;margin:0 auto 14px;font-size:1.05rem;line-height:1.6;color:#5d452a;">You provide or approve the photos, videos, writing, reviews, product information, and links used for your project. Trailhead organizes that approved material into pages, tools, and online systems that match your goals.</p><div class="section-title">Step 6 — Review, Launch, and Keep Moving</div><p style="max-width:640px;margin:0 auto 14px;font-size:1.05rem;line-height:1.6;color:#5d452a;">Nothing goes live without your review and approval. After launch, you choose only the ongoing support you want — updates, new pages, content organization, technical coordination, or campaign help.</p><div class="section-title">The Trail, Start to Finish</div><p style="font-family:'Alfa Slab One',serif;color:#3a2a1a;letter-spacing:.1em;margin:6px 0;">YOUR IDEA</p><p style="color:#9a5b2e;font-size:1.3rem;margin:2px 0;">&darr;</p><p style="font-family:'Alfa Slab One',serif;color:#3a2a1a;letter-spacing:.1em;margin:6px 0;">YOUR APPROVED CONTENT</p><p style="color:#9a5b2e;font-size:1.3rem;margin:2px 0;">&darr;</p><p style="font-family:'Alfa Slab One',serif;color:#3a2a1a;letter-spacing:.1em;margin:6px 0;">TRAILHEAD PROJECT PLAN</p><p style="color:#9a5b2e;font-size:1.3rem;margin:2px 0;">&darr;</p><p style="font-family:'Alfa Slab One',serif;color:#3a2a1a;letter-spacing:.1em;margin:6px 0;">COORDINATION WITH TOOLS AND PROVIDERS</p><p style="color:#9a5b2e;font-size:1.3rem;margin:2px 0;">&darr;</p><p style="font-family:'Alfa Slab One',serif;color:#3a2a1a;letter-spacing:.1em;margin:6px 0;">YOUR REVIEW AND APPROVAL</p><p style="color:#9a5b2e;font-size:1.3rem;margin:2px 0;">&darr;</p><p style="font-family:'Alfa Slab One',serif;color:#3a2a1a;letter-spacing:.1em;margin:6px 0;">YOUR LIVE WEBSITE OR PROJECT SYSTEM</p><p style="max-width:640px;margin:0 auto 14px;font-size:1.05rem;line-height:1.6;color:#5d452a;">You remain the owner of your original content and project identity. Trailhead provides the agreed support, coordination, and organization needed to help bring the system together.</p><p style="max-width:640px;margin:0 auto 14px;font-size:1.05rem;line-height:1.6;color:#5d452a;">You bring the project. We help build the path forward.</p><div class="section-title">Ready When You Are</div><div class="buttons"><a href="what-we-do.html" class="btn"><span class="label">See What We Do</span><span class="sub">Explore the areas of support</span></a><a href="contact.html" class="btn"><span class="label">Start a Conversation</span><span class="sub">Tell us what you are building</span></a></div></div></div></body></html>
